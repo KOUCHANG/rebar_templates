@@ -2,6 +2,7 @@ TARGETTEMPLATESDIR=~/.rebar/templates
 TEMPLATESDIR=$(shell pwd)/templates
 
 all:
+	@echo do nothing
 
 link:
 	mkdir -p ${TARGETTEMPLATESDIR} > /dev/null
