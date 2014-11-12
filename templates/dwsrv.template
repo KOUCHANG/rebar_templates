@@ -1,0 +1,2 @@
+{variables, [{srvid, "myserver"}]}.
+{template, "dwsrv.erl", "src/{{srvid}}.erl"}.
