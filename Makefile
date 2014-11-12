@@ -1,13 +1,13 @@
 TARGETTEMPLATESDIR=~/.rebar/templates
 TEMPLATESDIR=$(shell pwd)/templates
 
-all: init
+all:
 
-init:
+cp:
 	mkdir -p ${TARGETTEMPLATESDIR} > /dev/null
-	ln -s ${TEMPLATESDIR}/* ${TARGETTEMPLATESDIR}
+	cp ${TEMPLATESDIR}/* ${TARGETTEMPLATESDIR}
 
 clean:
 	sh script/clean.sh ${TEMPLATESDIR} ${TARGETTEMPLATESDIR}
 
-.PHONY: init clean
+.PHONY: link clean
