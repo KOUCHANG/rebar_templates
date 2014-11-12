@@ -13,6 +13,6 @@ do
 		echo rm ${TARGETTEMPLATESDIR}/${template_file}
 		rm ${TARGETTEMPLATESDIR}/${template_file}
 	else
-		echo ${template_file} is not removed.
+		echo ${TARGETTEMPLATESDIR}/${template_file} is not removed.
 	fi
 done
