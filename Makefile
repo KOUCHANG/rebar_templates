@@ -3,9 +3,9 @@ TEMPLATESDIR=$(shell pwd)/templates
 
 all:
 
-cp:
+link:
 	mkdir -p ${TARGETTEMPLATESDIR} > /dev/null
-	cp ${TEMPLATESDIR}/* ${TARGETTEMPLATESDIR}
+	ln ${TEMPLATESDIR}/* ${TARGETTEMPLATESDIR}
 
 clean:
 	sh script/clean.sh ${TEMPLATESDIR} ${TARGETTEMPLATESDIR}

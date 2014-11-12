@@ -7,8 +7,9 @@ TARGETTEMPLATESDIR=${2}
 for template_path in `ls -1 ${TEMPLATESDIR}/*`
 do
 	template_file=${template_path##*/}
-	referer=`readlink -f ${TARGETTEMPLATESDIR}/${template_file}`
-	if [ "${referer%/*}" = "${TEMPLATESDIR}" ]
+	target_inode=`ls -i ${TARGETTEMPLATESDIR}/${template_file} 2>/dev/null`
+	template_inode=`ls -i ${template_path}`
+	if [ "${target_inode%% *}" = "${template_inode%% *}" ]
 	then
 		echo rm ${TARGETTEMPLATESDIR}/${template_file}
 		rm ${TARGETTEMPLATESDIR}/${template_file}
