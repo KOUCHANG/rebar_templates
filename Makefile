@@ -1,15 +1,13 @@
-TARGETTEMPLATEDIR=~/.rebar/templates
+TARGETTEMPLATESDIR=~/.rebar/templates
+TEMPLATESDIR=$(shell pwd)/templates
 
 all: init
 
 init:
-	mkdir -p ${TARGETTEMPLATEDIR} > /dev/null
-	ln -s $(shell pwd)/templates/* ${TARGETTEMPLATEDIR}
+	mkdir -p ${TARGETTEMPLATESDIR} > /dev/null
+	ln -s ${TEMPLATESDIR}/* ${TARGETTEMPLATESDIR}
 
 clean:
-	# templates以下のファイルを1つ取得
-	# TARGETTEMPLATEDIRに同名のファイルがあるかチェック
-	# 同名のファイルがあればリンク先をチェック
-	# リンク先がtemplates以下のファイルであれば削除
+	sh script/clean.sh ${TEMPLATESDIR} ${TARGETTEMPLATESDIR}
 
 .PHONY: init clean
