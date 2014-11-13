@@ -1,4 +1,4 @@
-%% @copyright 2013-.... DWANGO Co., Ltd. All Rights Reserved.
+%% @copyright {{yearno}} {{author}} All Rights Reserved.
 %%
 %% @doc モジュール説明.
 -module({{srvid}}).

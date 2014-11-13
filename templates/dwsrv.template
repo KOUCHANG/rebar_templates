@@ -1,2 +1,2 @@
-{variables, [{srvid, "myserver"}]}.
+{variables, [{srvid, "myserver"}, {yearno, "2014"}, {author, "DWANGO Co., Ltd."}]}.
 {template, "dwsrv.erl", "src/{{srvid}}.erl"}.
