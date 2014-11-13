@@ -1,5 +1,5 @@
 # template のコピーライトのauthorを指定
-AUTHOR="KOUCHANG"
+AUTHOR=DWANGO Co., Ltd.
 
 TARGETTEMPLATESDIR=~/.rebar/templates
 TEMPLATESSRCDIR=$(shell pwd)/templates_source
@@ -12,7 +12,7 @@ init:
 	mkdir -p ${TEMPLATESDIR} > /dev/null
 	echo templatesdir: ${TEMPLATESDIR#/*}
 	cp -p ${TEMPLATESSRCDIR}/* ${TEMPLATESDIR}
-	ls -1 templates/*.template | xargs sed -i -e "/^ *{variables,/s/<<Please 'make init' in rebar_templates.>>/KOUCHANG/"
+	ls -1 templates/*.template | xargs sed -i -e "/^ *{variables,/s/<<Please 'make init' in rebar_templates.>>/${AUTHOR}/"
 
 link:
 	mkdir -p ${TARGETTEMPLATESDIR} > /dev/null
