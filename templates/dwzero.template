@@ -1,0 +1,3 @@
+{variables, [{appid, myapp}]}.
+{template, "dwzero_Makefile", "Makefile"}.
+{template, "dwzero_rebar.config", "rebar.config"}.
