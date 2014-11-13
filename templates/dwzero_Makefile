@@ -11,8 +11,8 @@ create-app:
 	if [ -f src/*.app.src ]; then \
 		echo "Application arleary was initialized."; \
 	else \
-		rm -rf .git; git init; \
-		./rebar create-app appid=$(APP); \
+		git init; \
+		./rebar create template=dwapp appid=$(APP); \
 		make init; \
 		echo "========================================"; \
 		echo "Please register a git remote repository."; \

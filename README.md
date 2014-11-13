@@ -1,13 +1,17 @@
 rebar_templates
 ===============
 
-Erlangのファイルやアプリケーションのひな形集。
+Erlangのファイルやアプリケーションのひな形集.
+
+**現在コピーライトが固定で埋め込まれているのは近々どうにかします.**
 
 # 使い方
 
-## リンク
+## テンプレートの準備
 
-以下のコマンドで、 ```templates/``` 以下のテンプレートファイルが ```${HOME}/.rebar/templates``` 以下にハードリンクされる.
+### リンク
+
+以下のコマンドで, ```templates/``` 以下のテンプレートファイルが ```${HOME}/.rebar/templates``` 以下にハードリンクされる.
 
 ```shell
 $ make link
@@ -17,15 +21,51 @@ $ make link
 
 ハードリンクしているのは以下の **3つの理由** のため
 
-1. シンボリックリンクだと、 ```./rebar list-templates``` 等で認識することができない.
+1. シンボリックリンクだと, ```./rebar list-templates``` 等で認識することができない.
 2. リポジトリ内の更新をpullした時に反映させるように.
 3. make clean時に対象のファイルを消せるように.
 
-## 削除
+### 削除
 
 以下のコマンドで対象のtemplatesを削除できる
 
 ```shell
 $ make clean
+```
+
+## 実際にテンプレートを使うとき
+
+### ゼロから
+
+何もないところから作業を始める時は,  ```dwzero``` テンプレートを用いる.
+
+```shell
+# 1. まず, どこかからErlangのアプリケーションを作りたいディレクトリに rebar ファイルを持って来ます.
+# ${APPDIR}: アプリケーションを作りたいディレクトリ
+# ${APPNAME}: 作りたいアプリケーションの名前
+$ cd ${APPDIR}
+$ ls
+rebar
+# 次のコマンドを叩きます.
+$ ./rebar create template=dwzero appid=${APPNAME}
+...
+$ ls
+Makefile rebar rebar.config
+# はいできあがり.
+$
+```
+
+### 新しいモジュールの作成
+
+```shell
+# ${MODNAME}: 新しいモジュールの名前
+$ ./rebar create template=dwmod modid=${MODNAME}
+```
+
+### 新しいサーバモジュールの作成
+
+```shel
+# ${SRVNAME}: 新しいサーバモジュールの名前
+$ ./rebar create template=dwsrv srvid=${SRVNAME}
 ```
 

@@ -1,7 +1,7 @@
 %% vim: set ft=erlang : -*- erlang -*-
 {application, {{appid}},
  [
-  {description, {{desc}}},
+  {description, "{{desc}}"},
   {vsn, git},
   {registered, []},
   {applications, [
