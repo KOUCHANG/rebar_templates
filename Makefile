@@ -2,12 +2,16 @@
 AUTHOR="KOUCHANG"
 
 TARGETTEMPLATESDIR=~/.rebar/templates
+TEMPLATESSRCDIR=$(shell pwd)/templates_source
 TEMPLATESDIR=$(shell pwd)/templates
 
 all:
 	@echo do nothing
 
 init:
+	mkdir -p ${TEMPLATESDIR} > /dev/null
+	echo templatesdir: ${TEMPLATESDIR#/*}
+	cp -p ${TEMPLATESSRCDIR}/* ${TEMPLATESDIR}
 	ls -1 templates/*.template | xargs sed -i -e "/^ *{variables,/s/<<Please 'make init' in rebar_templates.>>/KOUCHANG/"
 
 link:
