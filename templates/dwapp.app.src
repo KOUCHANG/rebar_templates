@@ -1,0 +1,13 @@
+%% vim: set ft=erlang : -*- erlang -*-
+{application, {{appid}},
+ [
+  {description, {{desc}}},
+  {vsn, git},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { {{appid}}_app, []}},
+  {env, []}
+ ]}.
