@@ -52,6 +52,11 @@ $ ./rebar create template=dwzero appid=${APPNAME}
 $ ls
 Makefile rebar rebar.config
 # はいできあがり.
+# 後は, アプリケーションで必要なファイルを作成します.
+$ make create-app
+# か
+$ ./rebar create template=dwapp appid=${APPNAME}
+# で.
 $
 ```
 
