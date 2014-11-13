@@ -1,4 +1,4 @@
-%% @copyright (C) 2013-2014 DWANGO Co., Ltd. All Rights Reserved.
+%% @copyright (C) {{yearno}} {{author}} All Rights Reserved.
 %%
 %% @doc `{{appid}}'のアプリケーションモジュール
 %% @private

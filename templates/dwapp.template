@@ -1,4 +1,4 @@
-{variables, [{appid, "myapp"}, {desc, ""}]}.
+{variables, [{appid, "myapp"}, {desc, ""}, {yearno, "2014"}, {author, "DWANGO Co., Ltd."]}.
 {template, "dwapp.app.src", "src/{{appid}}.app.src"}.
 {template, "dwapp_app.erl", "src/{{appid}}_app.erl"}.
 {template, "dwapp_sup.erl", "src/{{appid}}_sup.erl"}.
