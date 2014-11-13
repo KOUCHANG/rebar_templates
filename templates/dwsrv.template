@@ -1,2 +1,2 @@
-{variables, [{srvid, "myserver"}, {yearno, "2014"}, {author, "<<Please 'make init' in rebar_templates.>>"}]}.
+{variables, [{srvid, "myserver"}, {yearno, "2014"}, {author, "KOUCHANG"}]}.
 {template, "dwsrv.erl", "src/{{srvid}}.erl"}.

@@ -8,7 +8,7 @@ all:
 	@echo do nothing
 
 init:
-	ls -1 templates/*.templates | xargs sed -i -e "/^ *{variables,/s/<<Please 'make init' in rebar_templates.>>/KOUCHANG/"
+	ls -1 templates/*.template | xargs sed -i -e "/^ *{variables,/s/<<Please 'make init' in rebar_templates.>>/KOUCHANG/"
 
 link:
 	mkdir -p ${TARGETTEMPLATESDIR} > /dev/null
