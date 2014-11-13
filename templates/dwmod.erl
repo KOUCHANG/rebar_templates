@@ -1,4 +1,4 @@
-%% @copyright 2013-2014 DWANGO Co., Ltd. All Rights Reserved.
+%% @copyright {{yearno}} {{author}} All Rights Reserved.
 %%
 %% @doc TODO: モジュールの説明を書く.
 -module({{modid}}).
