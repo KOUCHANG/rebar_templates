@@ -1,4 +1,4 @@
-{variables, [{appid, "myapp"}, {desc, ""}, {yearno, "2014"}, {author, "<<Please 'make init' in rebar_templates.>>"}]}.
+{variables, [{appid, "myapp"}, {desc, ""}, {yearno, "2014"}, {author, "<<Please 'make compile' with AUTHOR in rebar_templates.>>"}]}.
 {template, "dwapp.app.src", "src/{{appid}}.app.src"}.
 {template, "dwapp_app.erl", "src/{{appid}}_app.erl"}.
 {template, "dwapp_sup.erl", "src/{{appid}}_sup.erl"}.
