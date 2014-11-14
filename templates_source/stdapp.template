@@ -1,0 +1,4 @@
+{variables, [{appid, "myapp"}, {desc, ""}, {yearno, "2014"}, {author, "KOUCHANG"}]}.
+{template, "stdapp.app.src", "src/{{appid}}.app.src"}.
+{template, "stdapp_app.erl", "src/{{appid}}_app.erl"}.
+{template, "stdapp_sup.erl", "src/{{appid}}_sup.erl"}.

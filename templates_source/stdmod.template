@@ -1,0 +1,3 @@
+{variables, [{modid, "mymod"}, {yearno, "2014"}, {author, "KOUCHANG"}]}.
+{template, "stdmod.erl", "src/{{modid}}.erl"}.
+{template, "stdmod_tests.erl", "test/{{modid}}_tests.erl"}.
