@@ -14,10 +14,12 @@ Erlangのファイルやアプリケーションのひな形集.
 以下のコマンドで, ```templates_source/``` 以下のテンプレートファイルが ```${HOME}/.rebar/templates``` 以下にハードリンクされる.
 
 ```shell
-$ make compile AUTHOR=KOUCHANG
+$ make compile AUTHOR=KOUCHANG YEARNO=2013-2014
 ```
 
-AUTHORにはcopyrightで指定する著作者を入れる.
+AUTHORにはcopyrightで指定する著作者を入れる(必須).
+
+copyrightのdefaultの年号を変更したい場合はYEARNOを指定する(任意).
 
 **【Note】**
 
