@@ -11,11 +11,13 @@ Erlangのファイルやアプリケーションのひな形集.
 
 ### リンク
 
-以下のコマンドで, ```templates/``` 以下のテンプレートファイルが ```${HOME}/.rebar/templates``` 以下にハードリンクされる.
+以下のコマンドで, ```templates_source/``` 以下のテンプレートファイルが ```${HOME}/.rebar/templates``` 以下にハードリンクされる.
 
 ```shell
-$ make link
+$ make compile AUTHOR=KOUCHANG
 ```
+
+AUTHORにはcopyrightで指定する著作者を入れる.
 
 **【Note】**
 
@@ -33,6 +35,8 @@ $ make link
 $ make clean
 ```
 
+ハードリンクしていることによりrebar_templatesで生成したテンプレートしか削除されない.
+
 ## 実際にテンプレートを使うとき
 
 ### ゼロから
@@ -46,18 +50,24 @@ $ make clean
 $ cd ${APPDIR}
 $ ls
 rebar
-# 次のコマンドを叩きます.
+# 2. 次のコマンドを叩きます.
 $ ./rebar create template=dwzero appid=${APPNAME}
 ...
 $ ls
 Makefile rebar rebar.config
 # はいできあがり.
-# 後は, アプリケーションで必要なファイルを作成します.
+# 3. 後は, アプリケーションで必要なファイルを作成します.
 $ make create-app
 # か
 $ ./rebar create template=dwapp appid=${APPNAME}
 # で.
 $
+```
+
+### 利用できるテンプレートを確認
+
+```shell
+$ ./rebar list-templates
 ```
 
 ### 新しいモジュールの作成
