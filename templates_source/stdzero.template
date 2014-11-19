@@ -1,3 +1,4 @@
 {variables, [{appid, myapp}]}.
 {template, "stdzero_Makefile", "Makefile"}.
 {template, "stdzero_rebar.config", "rebar.config"}.
+{template, "stdzero_gitignore", ".gitignore"}.
