@@ -26,4 +26,4 @@ clean:
 	sh script/clean.sh ${TEMPLATESDIR} ${TARGETTEMPLATESDIR}
 	rm -f templates/*
 
-.PHONY: link clean
+.PHONY: compile clean
