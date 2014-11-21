@@ -12,7 +12,7 @@ compile:
 	@sh script/clean.sh ${TEMPLATESDIR} ${TARGETTEMPLATESDIR}
 	mkdir -p ${TEMPLATESDIR} > /dev/null
 	cp -f ${TEMPLATESSRCDIR}/* ${TEMPLATESDIR}
-	# NOTE: 万が一, YEARNOに'KOUCHANG'という文字列が入ると失敗する.
+	@# NOTE: 万が一, YEARNOに'KOUCHANG'という文字列が入ると失敗する.
 	ls -1 templates/*.template | xargs sed -i -e "/^ *{variables,/s/2014/${YEARNO}/"
 	ls -1 templates/*.template | xargs sed -i -e "/^ *{variables,/s/KOUCHANG/${AUTHOR}/"
 	mkdir -p ${TARGETTEMPLATESDIR} > /dev/null

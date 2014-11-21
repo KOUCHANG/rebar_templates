@@ -1,4 +1,4 @@
-{variables, [{appid, myapp}]}.
+{variables, [{appid, myapp}, {yearno, 2014}]}.
 {template, "stdzero_Makefile", "Makefile"}.
 {template, "stdzero_rebar.config", "rebar.config"}.
 {template, "stdzero_gitignore", ".gitignore"}.
