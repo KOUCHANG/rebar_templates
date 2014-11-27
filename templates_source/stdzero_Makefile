@@ -12,7 +12,7 @@ create-app:
 		echo "Application arleary was initialized."; \
 	else \
 		git init; \
-		./rebar create template=stdapp appid=$(APP) yearno={{yearno}}; \
+		./rebar create template=stdapp appid=$(APP) yearno="{{yearno}}"; \
 		make init; \
 		echo "========================================"; \
 		echo "Please register a git remote repository."; \
