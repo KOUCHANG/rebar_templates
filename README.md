@@ -41,7 +41,7 @@ $ make clean
 
 ### ゼロから
 
-何もないところから作業を始める時は,  ```dwzero``` テンプレートを用いる.
+何もないところから作業を始める時は,  ```stdzero``` テンプレートを用いる.
 
 ```shell
 # 1. まず, どこかからErlangのアプリケーションを作りたいディレクトリに rebar ファイルを持って来ます.
@@ -51,7 +51,7 @@ $ cd ${APPDIR}
 $ ls
 rebar
 # 2. 次のコマンドを叩きます.
-$ ./rebar create template=dwzero appid=${APPNAME}
+$ ./rebar create template=stdzero appid=${APPNAME}
 ...
 $ ls
 Makefile rebar rebar.config
@@ -59,7 +59,7 @@ Makefile rebar rebar.config
 # 3. 後は, アプリケーションで必要なファイルを作成します.
 $ make create-app
 # か
-$ ./rebar create template=dwapp appid=${APPNAME}
+$ ./rebar create template=stdapp appid=${APPNAME}
 # で.
 $
 ```
@@ -74,13 +74,13 @@ $ ./rebar list-templates
 
 ```shell
 # ${MODNAME}: 新しいモジュールの名前
-$ ./rebar create template=dwmod modid=${MODNAME}
+$ ./rebar create template=stdmod modid=${MODNAME}
 ```
 
 ### 新しいサーバモジュールの作成
 
 ```shel
 # ${SRVNAME}: 新しいサーバモジュールの名前
-$ ./rebar create template=dwsrv srvid=${SRVNAME}
+$ ./rebar create template=stdsrv srvid=${SRVNAME}
 ```
 
