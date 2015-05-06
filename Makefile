@@ -1,4 +1,4 @@
-YEARNO=2014
+YEARNO=2015
 
 TARGETTEMPLATESDIR=~/.rebar/templates
 TEMPLATESSRCDIR=$(shell pwd)/templates_source
